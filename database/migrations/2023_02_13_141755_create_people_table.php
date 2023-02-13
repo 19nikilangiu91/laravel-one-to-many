@@ -10,6 +10,8 @@ return new class extends Migration {
      *
      * @return void
      */
+
+    //  1) Creo la "people" Migration.
     public function up()
     {
         Schema::create('people', function (Blueprint $table) {

@@ -14,17 +14,17 @@ return new class extends Migration {
     {
         Schema::table('posts', function (Blueprint $table) {
 
-            // 1) Vado a creare una foreignkey alla tabella "posts"
+            // 2) Vado a creare una foreignkey alla tabella "posts"
             $table->foreignId('person_id')
                 ->constrained();
         });
 
         Schema::table('person_details', function (Blueprint $table) {
 
-            // 1) Imposto la colonna "person_id" come chiave primaria
+            // 2) Imposto la colonna "person_id" come chiave primaria
             $table->primary('person_id');
 
-            // 1) Vado a creare una foreignkey alla tabella "person_details"
+            // 2) Vado a creare una foreignkey alla tabella "person_details"
             $table->foreignId('person_id')
                 ->constrained();
         });
@@ -39,7 +39,7 @@ return new class extends Migration {
     {
         Schema::table('posts', function (Blueprint $table) {
 
-            // 2) dalla struttura della tabella "posts" prendo la chiave "posts_person_id_foreign"
+            // 3) dalla struttura della tabella "posts" prendo la chiave "posts_person_id_foreign"
             // Vado ad eliminare la relazione.
             $table->dropForeign('posts_person_id_foreign');
             // Vado ad eliminare la colonna.
