@@ -19,3 +19,6 @@ use App\Http\Controllers\MainController;
 // Home Route
 Route::get('/', [MainController::class, 'home'])
     ->name('home');
+// Posts Route
+Route::get('/posts', [MainController::class, 'posts'])
+    ->name('posts');
