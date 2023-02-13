@@ -23,10 +23,12 @@ class DatabaseSeeder extends Seeder
 
         // 7) Richiamo il "PersonSeeder" nel DB
         // 8) Richiamo il "PersonDetailSeeder" nel DB
+        // 10) Richiamo il "PostSeeder" nel DB
 
         $this->call([
             PersonSeeder::class,
             PersonDetailSeeder::class,
+            PostSeeder::class,
         ]);
     }
 }
